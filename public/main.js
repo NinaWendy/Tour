@@ -74,7 +74,7 @@ function toggleCardDisplay() {
   }).then(data => {
       if (data.ok) {
           data.json().then(res => {
-              console.log(res);
+              console.log(res+"test");
               alert(res.message);
           });
       } else {
