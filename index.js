@@ -60,11 +60,6 @@ function pl(word,number){
     var parameter = "best("+word+",X).";
     var ret = swipl.call('[prolog/tourg].');
     var classCall = swipl.call('class('+word+',X)');
-    // var aan = "A ";
-    // if(word[0]==='a'||word[0]==='e'||word[0]==='i'||word[0]==='o'||word[0]==='u'){
-    //         console.log(word[0]);
-    //         aan = "An ";
-    //     }
     if(ret){
         
         if(classCall.X != 'unknown'){

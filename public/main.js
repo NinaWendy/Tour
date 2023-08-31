@@ -24,6 +24,11 @@
 //   window.scrollY >= 500 ? goTopBtn.classList.add("active")
 //     : goTopBtn.classList.remove("active");
 // });
+
+function closePop(){
+  const popup = document.querySelector('.popup');
+  popup.classList.toggle('hidden');
+}
 function toggleCardDisplay() {
     const centeredCard = document.querySelector('.centered-card');
     const cardDisplayStyle = centeredCard.style.display;
@@ -37,6 +42,8 @@ function toggleCardDisplay() {
   
   document.addEventListener('DOMContentLoaded', function () {
     const vacationForm = document.getElementById('vacation-form');
+    const popup = document.querySelector('.popup');
+
   
     vacationForm.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -52,6 +59,10 @@ function toggleCardDisplay() {
       console.log('Number of People:', numberOfPeople);
       console.log('Budget:', budget);
       console.log('Vacation Type:', vacationType);
+      popup.classList.toggle('visible');
+      toggleCardDisplay();
+     
+
    // Fetch request to server
     //     fetch('/',{method:'POST',
     //     headers:{'Accept':'application/json','Content-Type':'application/json'},
@@ -75,7 +86,10 @@ function toggleCardDisplay() {
       if (data.ok) {
           data.json().then(res => {
               console.log(res+"test");
-              alert(res.message);
+              // alert(res.message);
+              const destination = document.getElementById('dest');
+              destination.textContent = res.message;
+
           });
       } else {
           console.error('Error: Server response is not valid JSON or empty.');
