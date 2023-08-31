@@ -178,7 +178,8 @@
     font-size: medium;
     display: block;
     left: 50%;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Abril Fatface", cursive;
+    font-weight: normal;
     box-sizing: border-box;
     transform: translate(-50%, -30%);
     text-align: center;
@@ -187,7 +188,7 @@
   }
 
   .popup img{
-    width: 60px;
+    width: 80px;
     margin-top: -30px;
     margin-left: 60px;
     border-radius: 50px;
@@ -195,13 +196,13 @@
   }
   .popup h2{
     font-size: 24px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Comforter Brush", cursive;
     font-weight: 800;
     margin: 30px 0 10px;
   }
   .popup button{
     width: 100%;
-    background-color: #62b540;
+    background-color: #fdc702;
     padding: 8px 0;
     color: #fff;
     outline: none;
