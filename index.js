@@ -7,7 +7,7 @@ const swipl = require('swipl');
 
 
 
-var port = process.env.PORT || 8027;
+var port = process.env.PORT || 8098;
 
 var learningValues = {}
 
